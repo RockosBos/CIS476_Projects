@@ -13,8 +13,11 @@ namespace CIS476_P1
             c1.Run();
             */
 
-            string[] lines = System.IO.File.ReadAllLines(@"C:\Users\Nicholas Kessey\Documents\GitHub\CIS476_Projects\CIS476_P1\CIS476_P1\Test1.txt");
-            for(int i = 0; i < lines.Length; i++)
+            //string[] lines = System.IO.File.ReadAllLines(@"C:\Users\Nicholas Kessey\Documents\GitHub\CIS476_Projects\CIS476_P1\CIS476_P1\Test1.txt");
+            //string[] lines = System.IO.File.ReadAllLines(@"C:\Users\Nicholas Kessey\Documents\GitHub\CIS476_Projects\CIS476_P1\CIS476_P1\Test2.txt");
+            string[] lines = System.IO.File.ReadAllLines(@"C:\Users\Nicholas Kessey\Documents\GitHub\CIS476_Projects\CIS476_P1\CIS476_P1\Test3.txt");
+
+            for (int i = 0; i < lines.Length; i++)
             {
                 AbstractFactory factory;
                 Client c;
