@@ -4,7 +4,11 @@ using System.Text;
 
 namespace CIS476_P1
 {
-    class W20Button
+    class W20Button : Button
     {
+        public override void DisplayName(Button a)
+        {
+            Console.WriteLine("This is a Button as " + a.GetType().Name);
+        }
     }
 }

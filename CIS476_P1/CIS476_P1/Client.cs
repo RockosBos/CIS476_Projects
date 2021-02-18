@@ -12,15 +12,21 @@ namespace CIS476_P1
 
         public Client(AbstractFactory factory)
         {
-            Button = factory.CreateButton();
-            Panel = factory.CreatePanel();
-            Textbox = factory.CreateTextbox();
+            if (factory != null)
+            {
+                Button = factory.CreateButton();
+                Panel = factory.CreatePanel();
+                Textbox = factory.CreateTextbox();
+            }
         }
         public void Run()
         {
-            Button.DisplayName(Button);
-            Panel.DisplayName(Panel);
-            Textbox.DisplayName(Textbox);
+            if (Button != null)
+            {
+                Button.DisplayName(Button);
+                Panel.DisplayName(Panel);
+                Textbox.DisplayName(Textbox);
+            }
         }
     }
 }
