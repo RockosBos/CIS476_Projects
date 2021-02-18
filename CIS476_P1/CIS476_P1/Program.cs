@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.Versioning;
 
 namespace CIS476_P1
 {
@@ -12,7 +13,39 @@ namespace CIS476_P1
             c1.Run();
             */
 
+            string[] lines = System.IO.File.ReadAllLines(@"C:\Users\Nicholas Kessey\Documents\GitHub\CIS476_Projects\CIS476_P1\CIS476_P1\Test1.txt");
+            for(int i = 0; i < lines.Length; i++)
+            {
+                AbstractFactory factory;
+                Client c;
+                switch (lines[i])
+                {
+                    case "Word90":
+                        factory = W90Factory.Instance();
+                        c = new Client(factory);
+                        c.Run();
+                        break;
 
+                    case "Word00":
+                        factory = W00Factory.Instance();
+                        c = new Client(factory);
+                        c.Run();
+                        break;
+
+                    case "Word10":
+                        factory = W10Factory.Instance();
+                        c = new Client(factory);
+                        c.Run();
+                        break;
+
+                    case "Word20":
+                        factory = W20Factory.Instance();
+                        c = new Client(factory);
+                        c.Run();
+                        break;
+                }
+            
+            }
 
             
         }
